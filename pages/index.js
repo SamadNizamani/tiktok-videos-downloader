@@ -1,3 +1,4 @@
+import Link from 'next/link'; 
 import { useState } from 'react';
 import axios from 'axios';
 import { FiDownload, FiMenu, FiX, FiGithub } from 'react-icons/fi';
@@ -12,7 +13,7 @@ export default function Home() {
   const handleDownload = async () => {
     setError('');
     setResult(null);
-    
+
     try {
       if (!url || !url.includes('tiktok.com')) {
         throw new Error('Please enter a valid TikTok URL');
@@ -42,8 +43,8 @@ export default function Home() {
           <div className="logo">TTDownloader</div>
           
           <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
             <button className="menu-close" onClick={() => setMenuOpen(false)}>
               <FiX />
             </button>
@@ -119,14 +120,14 @@ export default function Home() {
           
           <div className="footer-section">
             <h4>Legal</h4>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
           </div>
           
           <div className="footer-section">
             <h4>Support</h4>
-            <a href="/contact">Contact Us</a>
-            <a href="/faq">FAQ</a>
+            <Link href="/contact">Contact Us</Link>
+            <Link href="/faq">FAQ</Link>
           </div>
         </div>
         
