@@ -136,7 +136,7 @@ export default function Home() {
             © 2024 TTDownloader. All rights reserved.
           </div>
           <div className="github-link">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/SamadNizamani" target="_blank" rel="noopener noreferrer">
               <FiGithub /> Source Code
             </a>
           </div>
